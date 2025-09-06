@@ -17,13 +17,13 @@ h2 {
 
   .homeBody1 {
     height: 100vh;
-    background-image: url("public/IMG_2923.JPG");
+    background-image: url("/IMG_2923.JPG");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 60% 0px;
     .overlay {
       height: 100vh;
-      background-color: rgba(0, 0, 0, 0.593);
+      background-color: rgba(0, 0, 0, 0.732);
       color: white;
       .iam {
         height: 100vh;
@@ -61,7 +61,9 @@ h2 {
     h1 {
       font-size: 2rem;
     }
-    .abme {
+
+    .abme,
+    .abmeed {
       border-top: none; /* remove top border */
       height: 50vh;
       padding-top: 5vh;
@@ -88,6 +90,9 @@ h2 {
           gap: 2vh;
         }
       }
+    }
+    .abmeed {
+      min-height: 70vh;
     }
   }
   .skills {

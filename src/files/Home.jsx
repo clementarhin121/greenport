@@ -33,7 +33,7 @@ function Home() {
             </p>
           </nav>
           <h1>Education</h1>
-          <nav className="abme">
+          <nav className="abmeed">
             <ul>
               <li>
                 <h2>Indiana Wesleyan University</h2>
