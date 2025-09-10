@@ -3,22 +3,24 @@
   display: flex;
   position: fixed;
   top: 0;
-  gap: 16%;
+  gap: 25%;
   padding: 4% 2%;
   width: 100%;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  z-index: 1000;
+
+  /* Transparent with subtle glass effect */
+  color: #b2b2b2;
 
   &.scrolled {
-    background-color: #800020; /* burgundy */
+    background-color: #ffffff; /* burgundy on scroll */
+    color: #b2b2b2;
   }
 
-  .master {
-    width: 70%;
-    height: auto;
-
-    h2 {
-      cursor: pointer;
-    }
+  .master h2 {
+    cursor: pointer;
+    transition: color 0.3s ease;
+    color: inherit;
   }
 
   .burger {
@@ -29,31 +31,34 @@
     display: flex;
     flex-direction: column;
     gap: 6px;
-    top: 20px;
-    left: 20px;
     z-index: 1001;
 
     .line {
       height: 3px;
-      background: #ffffff;
       border-radius: 2px;
       transition: all 0.3s ease;
+      background: currentColor; /* follows text color */
     }
   }
 
   .sideMenu {
     position: fixed;
-    right: -250px; /* hidden */
+    right: -250px;
     width: 250px;
-    height: 50%;
-    background: rgba(255, 255, 255, 0.15); /* glass effect */
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    color: #fff;
+    height: 50vh;
+    background: rgba(128, 0, 32, 0.25); /* lighter transparent burgundy */
+    color: #ffffff;
     top: 10%;
-    padding-top: 60px;
+    padding-top: 10px;
     transition: right 0.3s ease;
     z-index: 1000;
+
+    /* Glassmorphism effect */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px); /* Safari support */
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 
     &.show {
       right: 5%;

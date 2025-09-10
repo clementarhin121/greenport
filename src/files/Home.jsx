@@ -1,5 +1,9 @@
 import Menu from "../components/Menu";
 
+const link = {
+  padding: "40px 50%",
+};
+
 function Home() {
   return (
     <>
@@ -14,8 +18,8 @@ function Home() {
                 <h1>I am a: </h1>
                 <ul>
                   <li>Bilingual</li>
-                  <li>AI Developer</li>
                   <li>Data Analyst</li>
+                  <li>AI Developer</li>
                   <li>Full-stack Developer</li>
                 </ul>
               </div>
@@ -149,12 +153,58 @@ function Home() {
           className="projects"
           id="project1">
           <h1>Check Out my Artifacts</h1>
-          <nav className="abme">
-            <p>
-              Hello, my name is Clement Arhin, and I love to create autonomous
-              AI Algorithms{" "}
-            </p>
-          </nav>
+          <a href="https://clementarhin121.github.io/chepperence/">
+            <nav className="abmeChef">
+              <div className="overlay">
+                <h3>
+                  Restaurant Menu
+                  <p>Food app built with React</p>
+                  <i
+                    class="fa-solid fa-link"
+                    style={link}></i>
+                </h3>
+              </div>
+            </nav>
+          </a>
+          <a href="https://clementarhin121.github.io/greenquiz/">
+            <nav className="abmeQuiz">
+              <div className="overlay">
+                <h3>
+                  React Quiz
+                  <p>Quiz app built with React</p>
+                  <i
+                    class="fa-solid fa-link"
+                    style={link}></i>
+                </h3>
+              </div>
+            </nav>
+          </a>
+          <a href="https://clementarhin121.github.io/greenweather/">
+            <nav className="abmeWeather">
+              <div className="overlay">
+                <h3>
+                  Weather App
+                  <p>Weather app built with React</p>
+                  <i
+                    class="fa-solid fa-link"
+                    style={link}></i>
+                </h3>
+              </div>
+            </nav>
+          </a>
+          <a href="news.html">
+            <nav className="abmeNews">
+              <div className="overlay">
+                <h3>
+                  News Letters
+                  <p>News Letter app built with React</p>
+                  <i
+                    class="fa-solid fa-link"
+                    style={link}></i>
+                </h3>
+              </div>
+            </nav>
+          </a>
         </section>
       </div>
     </>

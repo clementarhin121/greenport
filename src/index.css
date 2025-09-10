@@ -35,13 +35,19 @@ h2 {
           padding: 2% 2%;
           gap: 8vh;
           ul {
-            padding-left: 18%;
+            padding-left: 20%;
             display: flex;
             flex-direction: column;
             gap: 10vh;
             li {
+              width: 90%;
               font-size: 2rem;
               cursor: pointer;
+              transition: 0.2s ease-in-out;
+            }
+            li:hover {
+              scale: 1.01;
+              color: orange;
             }
           }
           h1 {
@@ -164,33 +170,69 @@ h2 {
     display: flex;
     flex-direction: column;
     gap: 5vh;
-    .abme {
+    .abmeChef,
+    .abmeQuiz,
+    .abmeWeather,
+    .abmeNews {
+      cursor: pointer;
+      background-image: url("/Screenshot 2025-09-06 at 9.38.18 AM.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 0px 73%;
       border-top: none; /* remove top border */
-      height: 50vh;
-      padding-top: 5vh;
-      padding-right: 2vh;
+      min-height: 30vh;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.047); /* subtle bottom shadow */
       transition: all 0.3s ease;
-      text-align: center;
+      text-align: left;
+      .overlay {
+        height: 30vh;
+        width: 100%;
+        padding: 2% 5%;
+        color: white;
+        transition: 0.5s;
+
+        h3 {
+          display: none;
+          transition: 0.5s;
+          p {
+            font-size: 0.8rem;
+            line-height: 40px;
+            color: gray;
+          }
+        }
+        ul {
+          display: flex;
+          flex-direction: column;
+          gap: 6vh;
+          li {
+            display: flex;
+            flex-direction: column;
+            gap: 2vh;
+          }
+        }
+      }
       &:hover {
         transform: translateY(-2px); /* lift effect */
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.105); /* deeper shadow */
-      }
-      p {
-        font-size: 1.2rem;
-        word-spacing: 2px;
-        line-height: 40px;
-      }
-      ul {
-        display: flex;
-        flex-direction: column;
-        gap: 6vh;
-        li {
-          display: flex;
-          flex-direction: column;
-          gap: 2vh;
+        .overlay {
+          background-color: rgba(0, 0, 0, 0.84);
+          h3 {
+            display: contents;
+          }
         }
       }
+    }
+    .abmeQuiz {
+      background-image: url("/Screenshot 2025-09-06 at 11.22.34 AM.png");
+      background-position: 0px 13%;
+    }
+    .abmeWeather {
+      background-image: url("/Screenshot 2025-09-10 at 1.49.02 PM.png");
+      background-position: 0px 13%;
+    }
+    .abmeNews {
+      background-image: url("/Screenshot 2025-09-10 at 1.52.42 PM.png");
+      background-position: 0px 13%;
     }
   }
 }
